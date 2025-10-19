@@ -1,0 +1,62 @@
+{
+  "device": {
+    "id": "tesla-cam-rpi5-001",
+    "name": "Tesla Model 3 Camera",
+    "location": "garage"
+  },
+  "cloudflare": {
+    "account_id": "YOUR_CLOUDFLARE_ACCOUNT_ID",
+    "api_token": "YOUR_CLOUDFLARE_API_TOKEN",
+    "worker_api": {
+      "base_url": "https://tesla-cam-api.yourdomain.workers.dev",
+      "api_key": "YOUR_WORKER_API_KEY"
+    }
+  },
+  "storage": {
+    "base_path": "/mnt/tesla-cam",
+    "temp_path": "/tmp/tesla-cam",
+    "max_storage_percent": 90,
+    "cleanup_age_days": 7
+  },
+  "upload": {
+    "enabled": true,
+    "batch_size": 5,
+    "retry_attempts": 3,
+    "retry_delay_seconds": 60,
+    "bandwidth_limit_mbps": 50,
+    "concurrent_uploads": 2
+  },
+  "monitoring": {
+    "watch_paths": [
+      "/mnt/tesla-cam/TeslaCam",
+      "/mnt/tesla-cam/TeslaSentry",
+      "/mnt/tesla-cam/TeslaTrackMode"
+    ],
+    "file_patterns": ["*.mp4"],
+    "scan_interval_seconds": 30
+  },
+  "auto_cleanup": {
+    "enabled": true,
+    "max_age_days": 30,
+    "keep_sentry_days": 90,
+    "min_free_space_gb": 50
+  },
+  "features": {
+    "ai_analysis": true,
+    "license_plate_detection": true,
+    "face_detection": false,
+    "motion_detection": true,
+    "real_time_alerts": true
+  },
+  "network": {
+    "wifi_ssid": "YOUR_WIFI_SSID",
+    "wifi_password": "YOUR_WIFI_PASSWORD",
+    "use_cellular": false,
+    "cellular_apn": ""
+  },
+  "debug": {
+    "log_level": "INFO",
+    "save_thumbnails": true,
+    "keep_processed_files": false
+  }
+}

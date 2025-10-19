@@ -1,0 +1,7 @@
+[0;32mTesla Cam AI - Remote Setup[0m
+[1;33mTarget: danielborrowman@192.168.222.60[0m
+
+[1;33mTesting SSH connection...[0m
+Connected
+[0;32m✅ Connection successful[0m
+

@@ -1,0 +1,28 @@
+{
+  "name": "tesla-cam-ai-workers",
+  "version": "1.0.0",
+  "description": "Cloudflare Workers for Tesla Camera AI",
+  "main": "api/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "deploy:dev": "wrangler deploy --env development",
+    "deploy:prod": "wrangler deploy --env production",
+    "tail": "wrangler tail",
+    "lint": "eslint api/**/*.js durable-objects/**/*.js || true"
+  },
+  "dependencies": {
+    "itty-router": "^4.0.25"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240117.0",
+    "eslint": "^8.56.0",
+    "wrangler": "^4.43.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "author": "Daniel Borrowman",
+  "license": "MIT"
+}

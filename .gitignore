@@ -1,0 +1,55 @@
+# Dependencies
+node_modules/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Environment files
+.env
+.env.local
+*.local
+
+# Wrangler
+.wrangler/
+.dev.vars
+
+# Build outputs
+dist/
+build/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets (keep example configs)
+config.json
+!config.example.json
+
+# Test data
+*.mp4
+*.avi
+*.mov
+
+# Database
+*.db
+*.sqlite
+processed_files.json
+
+# Temporary files
+/tmp/
+*.tmp
+*.bak
+*.backup.*
+
+# Deployment
+*.tar.gz
+
